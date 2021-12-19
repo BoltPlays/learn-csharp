@@ -1,6 +1,4 @@
-﻿using ArchieConsole.Dad;
-
-namespace ArchieConsole
+﻿namespace ArchieConsole
 {
     class Program
     {
@@ -13,11 +11,22 @@ namespace ArchieConsole
 
             Console.WriteLine("What is your name?");
 
-            string name = Console.ReadLine();
+            // question mark here means --> the value of name can be null OR a string
+            // an empty string is NOT the same as null
+            string? name = Console.ReadLine();
+
+            // comparison operators: ==, !=, >, <, >=, <=
+            // equality operators: ==, !=
+            // logical operators: &&, ||, !
+            if (name == null || name == String.Empty) // you can also use this: if (String.IsNullOrEmpty(name))
+            {
+                Console.WriteLine("You didn't enter a value!");
+                return;
+            }
 
             Console.WriteLine("Hello " + name);
 
-            Thread.Sleep(3333);
+            Thread.Sleep(2000);
         }
     }
 }
