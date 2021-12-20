@@ -24,9 +24,30 @@
                 return;
             }
 
-            Console.WriteLine("Hello " + name);
+            Console.WriteLine("Hello " + name + "!");
 
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
+
+            Console.WriteLine("How old are you?");
+
+            string? ageString = Console.ReadLine();
+            int age;
+            // if the value of ageString is not a valid integer,
+            // age will be set to 0 and the TryParse method will return false
+            bool isValidNumber = Int32.TryParse(ageString, out age);
+            if (isValidNumber == false)
+            {
+                Console.WriteLine("You didn't enter a valid number!");
+                return;
+            }
+            if (age == 1)
+            {
+                Console.WriteLine("You are " + age + " year old.");
+            }
+            else
+            {
+                Console.WriteLine("You are " + age + " years old.");
+            }
         }
     }
 }
