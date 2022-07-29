@@ -13,40 +13,41 @@
 
             // question mark here means --> the value of name can be null OR a string
             // an empty string is NOT the same as null
-            string? name = Console.ReadLine();
+            string? userTypedName = Console.ReadLine();
 
             // comparison operators: ==, !=, >, <, >=, <=
             // equality operators: ==, !=
             // logical operators: &&, ||, !
-            if (name == null || name == String.Empty) // you can also use this: if (String.IsNullOrEmpty(name))
+            bool hasUserNotEnteredValidName = String.IsNullOrWhiteSpace(userTypedName);
+            if (hasUserNotEnteredValidName)
             {
                 Console.WriteLine("You didn't enter a value!");
                 return;
             }
 
-            Console.WriteLine("Hello " + name + "!");
+            Console.WriteLine("Hello " + userTypedName + "!");
 
             Thread.Sleep(1000);
 
             Console.WriteLine("How old are you?");
 
             string? ageString = Console.ReadLine();
-            int age;
+            int convertedAge;
             // if the value of ageString is not a valid integer,
             // age will be set to 0 and the TryParse method will return false
-            bool isValidNumber = Int32.TryParse(ageString, out age);
+            bool isValidNumber = Int32.TryParse(ageString, out convertedAge);
             if (isValidNumber == false)
             {
                 Console.WriteLine("You didn't enter a valid number!");
                 return;
             }
-            if (age == 1)
+            if (convertedAge == 1)
             {
-                Console.WriteLine("You are " + age + " year old.");
+                Console.WriteLine("You are " + convertedAge + " year old.");
             }
             else
             {
-                Console.WriteLine("You are " + age + " years old.");
+                Console.WriteLine("You are " + convertedAge + " years old.");
             }
         }
     }

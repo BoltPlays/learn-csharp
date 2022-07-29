@@ -1,13 +1,15 @@
 namespace ArchieConsole.Dad
 {
-    class Learn
+    public class Learn
     {
         // variable types - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
+        // methods
+        // - void - means the method will not return anything, no value is returned by the method
         public static void BooleanTypes()
         {
             // boolean - true or false (also think of this as 0 and 1) (think of as on and off)
             bool isDadEpic = true;
-            if (isDadEpic)
+            if (isDadEpic) // condition/expression - will return true or false
             {
                 Console.WriteLine("Dad is epic");
             }
@@ -31,7 +33,7 @@ namespace ArchieConsole.Dad
             Console.WriteLine(pizza);
         }
 
-       public static void IntegerTypes()
+        public static void IntegerTypes()
         {
             // integers - think of them as numbers
             int sleepTime = 200;
@@ -45,7 +47,7 @@ namespace ArchieConsole.Dad
 
         public static void Arrays()
         {
-            // arrays
+            // arrays - a collection of stuff / a list of things
             int[] numbers = new int[5];
             numbers[0] = 12;
             Console.WriteLine("First value in numbers array " + numbers[0]);
@@ -60,7 +62,7 @@ namespace ArchieConsole.Dad
             Console.WriteLine(food[1]);
 
             string[] namesArray = { "Archie", "Charlie", "Dad", "Mum", "Grandad" };
-            // position or index        0          1        2      3       4
+            // position or index       0          1        2      3        4
             Console.WriteLine("Second string in array: " + namesArray[1]);
             Console.WriteLine("Fifth string in array: " + namesArray[4]);
             Console.WriteLine();
