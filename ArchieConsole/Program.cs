@@ -49,6 +49,13 @@
             {
                 Console.WriteLine("You are " + convertedAge + " years old.");
             }
+
+            int answer = Program.addNumbers(1, 3);
+        }
+
+        private static int addNumbers(int number1, int number2)
+        {
+            return number1 + number2;
         }
     }
 }

@@ -3,6 +3,7 @@ namespace ArchieConsole.Dad
     public class Learn
     {
         // variable types - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
+        // variables - places to store things
         // methods
         // - void - means the method will not return anything, no value is returned by the method
         public static void BooleanTypes()
